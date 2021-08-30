@@ -492,7 +492,7 @@ Event handlers will receive a **context** object with information about the widg
 
 ## APM Deployment Tab
 
-![APM Deployment Tab](https://p-qkfgo2.t2.n0.cdn.getcloudapp.com/items/6quYQY5n/a457c252-7a48-4a20-98d3-0fa4098d790c.jpg?v=c0674a76e512785285e7cba5edd52060)
+![APM Deployment Tab](https://p-qkfgo2.t2.n0.cdn.getcloudapp.com/items/Jrux1nWP/5c7f9e5d-da87-45b2-89bf-bcbd25ed9bc2.jpg?v=5e7ac3444c2d58127759fc89d3424852)
 
 Allows applications to extend APM Deployment Tracking with additional tabs.
 

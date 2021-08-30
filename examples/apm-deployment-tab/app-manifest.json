@@ -1,0 +1,23 @@
+{
+  "main_url": "http://localhost:3000",
+  "scopes": [],
+  "features": [
+    {
+      "name": "apm_deployment_tab",
+      "options": {
+        "items": [
+          {
+            "source": "/deployment-downloads",
+            "key": "deployment-downloads",
+            "title": "Downloads"
+          }
+        ]
+      }
+    }
+  ],
+  "description": "An example App showcasing the APM Deployment Tab feature",
+  "dev_mode_url": "http://localhost:3000",
+  "name": "Example APM Deployment Tab App",
+  "api_version": "v1.0",
+  "icon": "https://static.datadoghq.com/static/favicon.ico"
+}
