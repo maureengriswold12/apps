@@ -96,6 +96,12 @@ client.events.on('dashboard_cog_menu_click', (clickContext) => {
      - `layout`: Widget layout information
 - `menuItem`: Optional information about a menu item when relevant:
     - `key`: The user-provided key of the menu item
+- `apmDeploymentTab`: Optional additional data when an IFrame or other feature occurs in APM Deployment Tracking
+    - `end`: End time in seconds since unix epoch
+    - `mainVersion`: The current version being tracked;
+    - `service`: The name of the service;
+    - `start`: Start time in seconds since unix epoch
+    - `targetVersion`: Optional version to compare against the `mainVersion`;
 
 
 
@@ -484,6 +490,36 @@ const unsubscribe = client.events.on('widget_context_menu_click', handler);
 
 Event handlers will receive a **context** object with information about the widget, and the menu item that was just clicked.
 
+## APM Deployment Tab
+
+![APM Deployment Tab](https://p-qkfgo2.t2.n0.cdn.getcloudapp.com/items/6quYQY5n/a457c252-7a48-4a20-98d3-0fa4098d790c.jpg?v=c0674a76e512785285e7cba5edd52060)
+
+Allows applications to extend APM Deployment Tracking with additional tabs.
+
+**Configuration:**
+
+APM Deployment Tabs can be specified in the feature options as shown in the example below:
+
+```js
+features: [
+    ...,
+    {
+        "name": "apm_deployment_tab",
+        "options":{
+            "items":[
+              {
+                  // (required) A unique identifier for this tab.
+                  "key": "deployment-downloads",
+                  // (required) The url of the tab iframe.
+                  "source": "/deployment-downloads",
+                  // (required) The tab name that's displayed in Deployment Tracking
+                  "title": "Downloads"
+              },
+            ]
+        }
+    }
+]
+```
 
 ## Authentication
 When this feature is enabled, users need be authenticated before using the app.This feature allows you to integrate your existing authentication mechanism like cookie based username/password login with the App Platform. 
