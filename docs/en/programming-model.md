@@ -96,6 +96,14 @@ client.events.on('dashboard_cog_menu_click', (clickContext) => {
      - `layout`: Widget layout information
 - `menuItem`: Optional information about a menu item when relevant:
     - `key`: The user-provided key of the menu item
+- `apmTraceTab`: Optional additional data when an IFrame or other feature occurs in the APM Trace Tab
+    - `end`: End time in seconds since unix epoch
+    - `env`: The environment of the span
+    - `meta`: Optional metadata associated with the span
+    - `service`: The name of the service
+    - `span_id`: The id of the span
+    - `start`: Start time in seconds since unix epoch
+    - `trace_id`: The id of the trace;
 
 
 
@@ -484,6 +492,36 @@ const unsubscribe = client.events.on('widget_context_menu_click', handler);
 
 Event handlers will receive a **context** object with information about the widget, and the menu item that was just clicked.
 
+## APM Trace Tab
+
+![APM Trace Tab](https://p-qkfgo2.t2.n0.cdn.getcloudapp.com/items/RBuLEK9r/5d4acc7e-5ee2-49da-8c22-19769e9382d8.jpg?v=9c0e19d9f8cee4e0aa94fe001a35596f)
+
+Allows applications to extend APM Trace Tracking with additional tabs.
+
+**Configuration:**
+
+APM Trace Tabs can be specified in the feature options as shown in the example below:
+
+```js
+features: [
+    ...,
+    {
+        "name": "apm_trace_tab",
+        "options":{
+            "items":[
+              {
+                  // (required) A unique identifier for this tab.
+                  "key": "github-user",
+                  // (required) The url of the tab iframe.
+                  "source": "/github-user",
+                  // (required) The tab name that's displayed the APM Trace Tab
+                  "title": "GitHub User"
+              },
+            ]
+        }
+    }
+]
+```
 
 ## Authentication
 When this feature is enabled, users need be authenticated before using the app.This feature allows you to integrate your existing authentication mechanism like cookie based username/password login with the App Platform. 
