@@ -1,0 +1,23 @@
+{
+  "scopes": [],
+  "features": [
+    {
+      "name": "apm_trace_tab",
+      "options": {
+        "items": [
+          {
+            "source": "/github-user",
+            "key": "github-user",
+            "title": "GitHub User"
+          }
+        ]
+      }
+    }
+  ],
+  "description": "An example App showcasing the APM Trace Tab feature",
+  "dev_mode_url": "http://localhost:3000",
+  "name": "Example APM Trace Tab App",
+  "icon": "https://static.datadoghq.com/static/favicon.ico",
+  "api_version": "v1.0",
+  "main_url": "http://localhost:3000"
+}

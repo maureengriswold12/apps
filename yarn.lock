@@ -1231,6 +1231,12 @@
   dependencies:
     "@datadog/framepost" "^0.2.3"
 
+"@datadog/ui-apps-sdk@git+ssh://git@github.com/DataDog/ui_apps_sdk.git#hardy.jones/apm-trace-tab-poc":
+  version "0.17.0"
+  resolved "git+ssh://git@github.com/DataDog/ui_apps_sdk.git#89af3ab48e28bc2f10d6f55fc15c7baf9c699047"
+  dependencies:
+    "@datadog/framepost" "^0.2.3"
+
 "@eslint/eslintrc@^0.4.3":
   version "0.4.3"
   resolved "https://registry.yarnpkg.com/@eslint/eslintrc/-/eslintrc-0.4.3.tgz#9e42981ef035beb3dd49add17acb96e8ff6f394c"
